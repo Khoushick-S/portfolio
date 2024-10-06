@@ -1,0 +1,83 @@
+body::-webkit-scrollbar, p::-webkit-scrollbar {
+    display: none;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.arrow::before {
+    content: '\25B6'; /* Unicode for right arrow */
+    margin-right: 8px;
+    color: #FFD700; /* Yellow color */
+}
+.underline.underline-section {
+    width: 8rem;
+    height: 1px;
+    background-color:#eab308;/* Yellow color */
+}
+
+
+  .radial {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(208, 190, 89, 0.1) 0%, transparent 60%);
+    border-radius: 70%;
+    pointer-events: none;
+    transition: transform 0.1s;
+    transform: translate(-50%, -50%);
+  }
+
+#sections a, .anchor{
+    text-decoration: none;
+    background-image: linear-gradient(#eab308, #eab308);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease-in-out;
+}
+
+#sections a.active-link , .anchor.active-link{
+    background-size: 50% 0.15em;
+}
+
+#sections a:hover, .anchor:hover,
+#sections a:focus, .anchor:focus,
+#sections a:active, .anchor:active{
+    background-size: 50% 0.15em;
+}
+
+#sections a.dummy-link, .anchor.dummy-link{
+    background-size: 0% 0.15em;
+}
+
+
+@media (max-width: 768px) { /* Adjust the max-width as necessary for your design */
+    body {
+        background-image: url('Me.jpg'); /* Replace with your image URL */
+        background-size: cover; /* Cover the entire viewport */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Prevent image from repeating */
+        height: 100vh;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+        z-index: 1; /* Ensure it sits above the background image */
+    }
+}
+
+.vertical-line::before {
+    content: '';
+    position: absolute;
+    left: 5px; /* aligns with the bullet */
+    top: 12px; /* starts just below the bullet */
+    bottom: 0; /* extends to the bottom of the content */
+    width: 2px;
+    background-color: rgb(63 63 70); /* Yellow line */
+  }

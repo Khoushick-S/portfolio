@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khoushick's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="KhoushickPortfolio.js"></script>
+    <link rel="stylesheet" href="KhoushickPortfolio.css">
+    <link href="tailstyles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.10/base.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
+</head>
+
+<body class="bg-black text-white">
+    <div id="cursor" class="radial"></div>
+    <section id="home" class="section">
+        <div class="overlay"></div>
+        <nav class="fixed md:hidden w-full z-10 shadow">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-16">
+                    <a class="flex-shrink-0" href="#">
+                    </a>
+                    <div class="block">
+                        <button id="navbar-toggle"
+                            class="flex items-center px-3 py-2 text-white-500 hover:text-yellow-700 focus:outline-none">
+                            <i id="nav-icon" class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden absolute z-20 w-full" id="mobileNav">
+                <div class="flex flex-col items-end justify-center space-y-2 px-4 py-2">
+                    <a class="nav-link text-white" href="#home">Home</a>
+                    <a class="nav-link text-neutral-500 hover:text-white" href="#about">About</a>
+                    <a class="nav-link text-neutral-500 hover:text-white" href="#resume">Resume</a>
+                    <a class="nav-link text-neutral-500 hover:text-white" href="#projects">Projects</a>
+                    <a class="nav-link text-neutral-500 hover:text-white" href="#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <div
+            class="z-0 container mx-auto px-4 flex md:flex-row items-center md:items-center justify-center md:justify-between h-screen">
+            <div class="md:w-1/2 md:flex hidden justify-center mr-5">
+                <img src="Me.jpg" alt="Khoushick S" class="object-cover h-screen shadow-lg">
+            </div>
+            <div class="md:w-1/2 z-10 text-center md:text-left mt-8 md:mt-0">
+                <h1 class="text-4xl md:text-6xl font-bold">Khoushick S</h1>
+                <p class="mt-4 text-2xl">
+                    I'm a&nbsp<a href=""
+                        class="typewrite font-bold underline underline-offset-[10px] decoration-yellow-500"
+                        data-period="2000"
+                        data-type='[ "Passionate Developer&nbsp", "Competitive Programmer&nbsp", "Graphic Designer&nbsp" ]'>
+                        <span class="wrap"></span>
+                    </a>
+                </p>
+                <div id="sections" class="mt-8 space-x-6 hidden md:flex">
+                    <a href="#home" class="text-white active-link">Home</a>
+                    <a href="#about" id="aboutLink" class="text-neutral-500 hover:text-white">About</a>
+                    <a href="#resume" class="text-neutral-500 hover:text-white">Resume</a>
+                    <a href="#projects" class="text-neutral-500 hover:text-white">Projects</a>
+                    <a href="#contact" class="text-neutral-500 hover:text-white">Contact</a>
+                    <a href="#" class="mb-1.5 text-transparent dummy-link">dummy</a>
+                </div>
+                <div class="mt-8 flex justify-center md:justify-start space-x-6">
+                    <a href="https://x.com/Khoushick_S" target="_blank"
+                        class="flex items-center justify-center w-10 h-10 bg-neutral-700 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+                        <i class="fab fa-x-twitter text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/khoushick" target="_blank"
+                        class="flex items-center justify-center w-10 h-10 bg-neutral-700 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/khoushick" target="_blank"
+                        class="flex items-center justify-center w-10 h-10 bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 rounded-full">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Khoushick-S" target="_blank"
+                        class="flex items-center justify-center w-10 h-10 bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 rounded-full">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="https://huggingface.co/Khoushick-S" target="_blank"
+                        class="flex items-center justify-center w-10 h-10 bg-neutral-700 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
+                            <g fill="currentColor">
+                                <path
+                                    d="M3 15.999c0-3.67 1.106-6.91 3.235-9.221C8.35 4.48 11.568 3 15.999 3s7.648 1.48 9.764 3.778c2.129 2.311 3.235 5.55 3.235 9.22q0 .632-.044 1.244c.33.179.602.447.787.772c.418.05.796.23 1.094.497q.163-1.232.163-2.512c0-4.061-1.227-7.821-3.764-10.576C24.684 2.654 20.903 1 16 1S7.313 2.654 4.763 5.423C2.226 8.178 1 11.938 1 15.999q0 1.281.163 2.513a2 2 0 0 1 1.096-.498a2 2 0 0 1 .784-.77A18 18 0 0 1 3 15.998m9.668 12.688a4.77 4.77 0 0 1-1.861 1.597c1.557.466 3.29.715 5.192.715s3.635-.25 5.194-.716a4.77 4.77 0 0 1-1.861-1.596a17 17 0 0 1-3.333.312c-1.198 0-2.308-.108-3.331-.312" />
+                                <path
+                                    d="M7.888 13.338q-.045.03-.088.062a2 2 0 0 0-.688 2.262a2 2 0 1 1 .775-2.325m17.001 2.326a2 2 0 0 0-.776-2.325a2 2 0 1 1 .776 2.325M9.349 9.413c-.21.228-.32.53-.367.778a1 1 0 0 1-1.964-.382c.089-.456.31-1.153.858-1.749C8.453 7.431 9.316 7 10.5 7c1.195 0 2.062.452 2.636 1.082c.544.597.77 1.292.85 1.747a1 1 0 0 1-1.971.342a1.55 1.55 0 0 0-.358-.742C11.47 9.222 11.142 9 10.5 9c-.653 0-.972.217-1.151.413m11.001 0c-.21.228-.32.53-.368.778a1 1 0 0 1-1.963-.382c.088-.456.31-1.153.857-1.749C19.453 7.431 20.316 7 21.5 7c1.196 0 2.062.452 2.636 1.082c.544.597.77 1.292.85 1.747a1 1 0 0 1-1.971.342a1.55 1.55 0 0 0-.358-.742C22.47 9.222 22.142 9 21.5 9c-.653 0-.971.217-1.15.413M8.4 14.2a1 1 0 0 1 1.4.2c.298.397 1.992 2.1 6.2 2.1s5.902-1.703 6.2-2.1a1 1 0 1 1 1.6 1.2c-.702.936-3.008 2.9-7.8 2.9s-7.098-1.964-7.8-2.9a1 1 0 0 1 .2-1.4m20.59 4.94a1 1 0 0 0-1.649-.892L23.58 21.54l-.079-.04c0-.413.038-.788.072-1.125c.09-.888.153-1.513-.572-1.875c-1.338-.669-1.952 1.564-2.363 3.743c-.094.496-.32.955-.572 1.392c-1.33 2.303-.066 4.614.935 5.365c1.789 1.342 3.5 1 5 0c.908-.605 2.635-1.82 3.927-2.737a1.116 1.116 0 0 0-1.146-1.904l-.126.064l1.985-1.655a1 1 0 0 0-.782-1.758l.293-.25a1 1 0 0 0-1.16-1.62m-25.982 0a1 1 0 0 1 1.649-.892l3.763 3.292l.079-.04c0-.413-.038-.788-.072-1.125c-.09-.888-.153-1.513.572-1.875c1.338-.669 1.952 1.564 2.363 3.743c.094.496.32.955.572 1.392c1.33 2.303.066 4.614-.935 5.365c-1.79 1.342-3.5 1-5 0c-.908-.605-2.635-1.82-3.927-2.737A1.116 1.116 0 0 1 3.22 24.36l.126.064l-1.985-1.655a1 1 0 0 1 .781-1.758l-.292-.25a1 1 0 0 1 1.16-1.62" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Khoushick-S" target="_blank"
+                        class="flex items-center justify-center w-10 h-10 bg-neutral-700 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="fixed bottom-0 right-0 pr-3 pb-3 text-sm z-10 text-center md:text-right w-full md:w-auto">
+            <p class="md:relative md:bottom-0 md:right-0">Designed by Khoushick S</p>
+        </div>
+    </section>
+
+    <!-- <nav id="mainNav" class="mt-4 bg-black fixed w-full top-0 left-0 z-0 transition-opacity duration-500">
+        <div class="flex items-center justify-between pl-10 h-16">
+            <a class="flex-shrink-0 text-4xl font-bold text-white" href="#">Khoushick S</a>
+            <ul class="flex justify-center space-x-6">
+                <li><a href="#home" data-section="home" class="nav-link anchor text-neutral-500 hover:text-white">Home</a></li>
+                <li><a href="#about" data-section="about" class="nav-link anchor text-neutral-500 hover:text-white">About</a></li>
+                <li><a href="#resume" class="anchor text-neutral-500 hover:text-white">Resume</a></li>
+                <li><a href="#projects" class="anchor text-neutral-500 hover:text-white">Projects</a></li>
+                <li><a href="#contact" class="anchor text-neutral-500 hover:text-white">Contact</a></li>
+                <li><a href="#" class="anchor mb-1.5 text-transparent dummy-link">dummy</a></li>
+            </ul>
+        </div>
+    </nav> -->
+    <section id="about" class="section py-12 bg-black">
+        <div class=" ml-12 flex items-center space-x-2">
+            <h2 class="text-neutral-400 text-xs font-bold">ABOUT ME</h2>
+            <div class="underline underline-section"></div>
+        </div>
+        <h2 class=" ml-12 text-3xl font-semibold text-white">Who am I</h2>
+        <div class="container mx-auto mt-10 flex flex-col md:flex-row items-center">
+            <div class="flex-shrink-0 mb-8 md:mb-0 md:ml-12">
+                <img src="Mee.jpg" alt="Khoushick S" class="w-64 h-auto rounded-lg shadow-lg">
+            </div>
+
+            <div class="ml-12 mr-12 text-center md:text-left">
+                <h3 class="text-yellow-400 font-semibold mb-4 text-2xl">
+                    I'm a&nbsp<a href=""
+                        class="typewrite text-white font-bold underline underline-offset-[10px] decoration-yellow-500"
+                        data-period="2000"
+                        data-type='[ "Passionate Developer&nbsp", "Competitive Programmer&nbsp", "Graphic Designer&nbsp" ]'>
+                        <span class="wrap"></span>
+                    </a>
+                </h3>
+                <p class="mb-6">
+                    As a forward-thinking engineer passionate about innovation, I thrive on exploring cutting-edge
+                    technologies and pushing the boundaries of possibility. With a commitment to continual growth, I
+                    embrace challenges and set ambitious goals that drive both personal and professional development.
+                    Leveraging a strong foundation in formal education and a tireless work ethic, I am dedicated to
+                    delivering exceptional results. Through collaboration and a solution-oriented approach, I
+                    consistently seek to advance the field and contribute to transformative progress.
+                </p>
+
+                <ul class="grid grid-cols-2 gap-4 text-sm md:text-lg text-gray-300">
+                    <li class="flex items-center space-x-2">
+                        <span class="arrow text-yellow-400"></span>
+                        <strong class="text-white">Birthday:</strong>
+                        <span class="text-neutral-300 hover:text-white">16 July 2003</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span class="arrow text-yellow-400"></span>
+                        <strong class="text-white">Degree:</strong>
+                        <span class="text-neutral-300 hover:text-white">B.E.</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span class="arrow text-yellow-400"></span>
+                        <strong class="text-white">Phone:</strong>
+                        <span class="text-neutral-300 hover:text-white">+91 86680 38130</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <span class="arrow text-yellow-400"></span>
+                        <strong class="text-white">E-mail:</strong>
+                        <a href="mailto:khoushick@gmail.com"
+                            class="text-neutral-300 underline hover:text-white">khoushick@gmail.com</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class=" ml-12 mt-10 flex items-center space-x-2">
+            <h2 class="text-neutral-400 text-xs font-bold">SKILLS</h2>
+            <div class="underline underline-section"></div>
+        </div>
+        <div class="ml-12 mr-12 justify-around flex flex-wrap space-x-4">
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span class="ml-2 mr-2">CSS</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <i class="fa-brands fa-html5"></i>
+                <span class=" ml-2 mr-2">HTML</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <i class="fa-brands fa-js"></i>
+                <span class="ml-2 mr-2">JavaScript</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <i class="fa-brands fa-bootstrap"></i>
+                <span class="ml-2 mr-2">Bootstrap</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 122.88 73.29">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #ffffff;
+                                fill-rule: evenodd;
+                            }
+                        </style>
+                    </defs>
+                    <title>tailwind-css</title>
+                    <path class="cls-1"
+                        d="M61.44,0Q36.87,0,30.72,24.43q9.22-12.21,21.5-9.16c4.68,1.16,8,4.53,11.72,8.26,6,6.08,13,13.11,28.22,13.11q24.57,0,30.72-24.43-9.21,12.22-21.5,9.16c-4.68-1.16-8-4.53-11.72-8.26C83.64,7,76.67,0,61.44,0ZM30.72,36.64Q6.15,36.64,0,61.07q9.23-12.21,21.5-9.16c4.68,1.16,8,4.53,11.72,8.27,6,6.07,13,13.11,28.22,13.11q24.57,0,30.72-24.43Q82.95,61.07,70.66,58c-4.68-1.16-8-4.53-11.72-8.26-6-6.08-13-13.12-28.22-13.12Z" />
+                </svg>
+                <span class="ml-2 mr-2">Tailwind CSS</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <i class="fa-brands fa-node-js"></i>
+                <span class="ml-2 mr-2">Node JS</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <i class="fa-brands fa-react"></i>
+                <span class="ml-2 mr-2">React JS</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
+                    <g fill="none">
+                        <rect width="256" height="256" fill="#f4f2ed" rx="60" />
+                        <path fill="#0f0f0f"
+                            d="M228 182.937a12.73 12.73 0 0 1-15.791-6.005c-9.063-13.567-19.071-26.522-28.69-39.755l-4.171-5.56c-11.454 15.346-22.908 30.08-33.361 45.371a12.23 12.23 0 0 1-15.012 5.894l42.98-57.659l-39.978-52.1a13.29 13.29 0 0 1 15.847 5.56c9.285 13.568 19.572 26.523 29.802 40.257c10.287-13.623 20.462-26.634 29.97-40.09a11.95 11.95 0 0 1 14.901-5.56l-15.513 20.573c-6.95 9.174-13.789 18.404-21.017 27.356a5.56 5.56 0 0 0 0 8.285c13.289 17.626 26.466 35.307 40.033 53.433M28 124.5c1.168-5.56 1.89-11.621 3.503-17.292c9.619-34.195 48.818-48.43 75.785-27.245c15.791 12.4 19.739 29.97 18.961 49.764H37.286c-1.446 35.363 24.075 56.714 56.713 45.816a33.86 33.86 0 0 0 21.518-23.965c1.724-5.56 4.504-6.505 9.786-4.893a45.15 45.15 0 0 1-21.573 32.972a52.26 52.26 0 0 1-60.884-7.784a54.77 54.77 0 0 1-13.678-32.138c0-1.89-.723-3.781-1.112-5.56A861 861 0 0 1 28 124.5m9.397-2.391h80.456c-.501-25.632-16.681-43.814-38.254-43.98c-24.02-.334-41.201 17.458-42.258 43.869z" />
+                    </g>
+                </svg>
+                <span class="ml-2 mr-2">Express JS</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115c-.28-.394-.53-.954-.735-1.44c-.036.495-.055.685-.523 1.184c-.723.566-4.438 3.682-4.74 10.02c-.282 5.912 4.27 9.435 4.888 9.884l.07.05A74 74 0 0 1 11.91 24h.481a29 29 0 0 1 .51-3.07c.417-.296.604-.463.85-.693a11.34 11.34 0 0 0 3.639-8.464c.01-.814-.103-1.662-.197-2.218m-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695c-.381-.045-.765-1.76-.765-2.405" />
+                </svg>
+                <span class="ml-2 mr-2">MongoDB</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 128 128">
+                    <path fill="#black" d="M22.67 47h99.67v73.67H22.67z" />
+                    <path data-name="original" fill="#ffffff"
+                        d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73L82 101l3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H56.66v46.23H45.15V69.26H28.88v-5a49.19 49.19 0 01.12-5.17C29.08 59 39 59 51 59h21.83z" />
+                </svg>
+                <span class="ml-2 mr-2">TypeScript</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <i class="fa-solid fa-database"></i>
+                <span class="ml-2 mr-2">SQL</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48">
+                    <path fill="#fff" fill-rule="evenodd"
+                        d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z"
+                        clip-rule="evenodd"></path>
+                    <path fill="#fff" fill-rule="evenodd"
+                        d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z"
+                        clip-rule="evenodd"></path>
+                    <path fill="black" fill-rule="evenodd"
+                        d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z"
+                        clip-rule="evenodd"></path>
+                    <path fill="#fff" fill-rule="evenodd"
+                        d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-2 mr-2">C</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg viewBox="0 0 128 128" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#fff"
+                        d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0" />
+                    <path fill="#fff"
+                        d="m68.36 126.586 46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0" />
+                    <path fill="#fff"
+                        d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0" />
+                    <path fill="#black"
+                        d="M63.445 26.035c-20.867 0-37.843 16.977-37.843 37.844s16.976 37.844 37.843 37.844c13.465 0 26.024-7.247 32.77-18.91L79.84 73.335c-3.38 5.84-9.66 9.465-16.395 9.465-10.433 0-18.922-8.488-18.922-18.922 0-10.434 8.49-18.922 18.922-18.922 6.73 0 13.017 3.629 16.39 9.465l16.38-9.477c-6.75-11.664-19.305-18.91-32.77-18.91zM92.88 57.57v4.207h-4.207v4.203h4.207v4.207h4.203V65.98h4.203v-4.203h-4.203V57.57H92.88zm15.766 0v4.207h-4.204v4.203h4.204v4.207h4.207V65.98h4.203v-4.203h-4.203V57.57h-4.207z" />
+                </svg>
+
+                <span class="ml-2 mr-2">C++</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <i class="fa-brands fa-python"></i>
+                <span class="ml-2 mr-2">Python</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <i class="fa-brands fa-java"></i>
+                <span class="ml-2 mr-2">Java</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
+                    <path fill="#fff"
+                        d="M 46.792969 22.089844 L 27.910156 3.207031 C 27.109375 2.402344 26.054688 2 25 2 C 23.945313 2 22.890625 2.402344 22.089844 3.207031 L 18.355469 6.941406 L 22.976563 11.5625 C 24.511719 10.660156 26.511719 10.855469 27.828125 12.171875 C 29.144531 13.488281 29.335938 15.488281 28.433594 17.019531 L 32.976563 21.5625 C 34.511719 20.660156 36.511719 20.855469 37.828125 22.171875 C 39.390625 23.734375 39.390625 26.265625 37.828125 27.828125 C 36.265625 29.390625 33.734375 29.390625 32.171875 27.828125 C 30.855469 26.511719 30.660156 24.511719 31.5625 22.976563 L 27.019531 18.433594 C 26.695313 18.625 26.355469 18.765625 26 18.855469 L 26 31.140625 C 27.722656 31.585938 29 33.136719 29 35 C 29 37.210938 27.210938 39 25 39 C 22.789063 39 21 37.210938 21 35 C 21 33.136719 22.277344 31.585938 24 31.140625 L 24 18.855469 C 23.332031 18.683594 22.695313 18.351563 22.171875 17.828125 C 20.855469 16.511719 20.664063 14.511719 21.566406 12.980469 L 16.941406 8.355469 L 3.207031 22.089844 C 1.597656 23.695313 1.597656 26.304688 3.207031 27.910156 L 22.089844 46.792969 C 22.890625 47.597656 23.945313 48 25 48 C 26.054688 48 27.109375 47.597656 27.910156 46.792969 L 46.792969 27.910156 C 48.402344 26.304688 48.402344 23.695313 46.792969 22.089844 Z">
+                    </path>
+                </svg>
+                <span class="ml-2 mr-2">git</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M10.45 10.48a1.3 1.3 0 0 1-1 1.33a4.8 4.8 0 0 1-1.61.19c-.14 0-.15-.09-.15-.19V9.26c0-.07.07-.19.11-.19a4.9 4.9 0 0 1 1.71.11a1.28 1.28 0 0 1 .94 1.3" />
+                    <path fill="currentColor"
+                        d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5m-6 11a3.5 3.5 0 0 1-1.68.54H7.98c-.28 0-.28 0-.28.27v2.32c0 .2-.06.26-.26.26H6.12c-.19 0-.24-.07-.24-.25V7.71c0-.2 0-.26.25-.26h3.13a3.34 3.34 0 0 1 1.62.47a2.75 2.75 0 0 1 1.4 2.39A2.83 2.83 0 0 1 11 13m5.92 3.3a4.6 4.6 0 0 1-2.73.19q-.409-.09-.8-.24a.29.29 0 0 1-.16-.2v-1.51c.32.12.62.26.93.36a3.66 3.66 0 0 0 1.61.14q.162-.03.31-.1a.37.37 0 0 0 .08-.63a4 4 0 0 0-.73-.4c-.41-.2-.83-.36-1.22-.59a1.82 1.82 0 0 1-1-1.93a2 2 0 0 1 1.36-1.63a4.2 4.2 0 0 1 2-.17c.32 0 .63.12.95.18c.17 0 .23.14.22.31v1.17c0 .22-.05.24-.25.16a3.87 3.87 0 0 0-2-.34a.9.9 0 0 0-.28.08a.37.37 0 0 0-.1.63q.434.289.91.5c.38.19.78.34 1.15.55a1.73 1.73 0 0 1 1 1.79a1.92 1.92 0 0 1-1.26 1.64z" />
+                </svg>
+                <span class="ml-2 mr-2">Photoshop</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M10.651 0C10.265.019 9.4.272 8.584.657c-.816.39-3.696 2.161-3.752 6.536c.072 4.145 3.847 11.191 6.397 13.455c0 0-4.141-6.952-4.439-13.013C6.488 1.575 10.651 0 10.651 0m2.679 0s4.159 1.575 3.861 7.635c-.299 6.061-4.439 13.013-4.439 13.013c2.547-2.264 6.324-9.31 6.396-13.455c-.057-4.375-2.936-6.146-3.752-6.536C14.58.272 13.715.019 13.33 0m-1.38.019a1.1 1.1 0 0 0-.555.144C9.864.99 8.909 3.982 9.177 8.66c.185 3.242 1.009 7.291 2.422 11.988h.7c1.413-4.697 2.24-8.742 2.425-11.984c.268-4.677-.688-7.674-2.219-8.501a1.1 1.1 0 0 0-.555-.144M7.017 1.066S2.543 2.909 3.431 8.225c.884 5.32 5.588 10.995 6.986 12.2c.503.457-5.777-6.548-6.386-12.699c-.291-2.323.39-4.9 2.986-6.66m9.966 0c2.595 1.76 3.276 4.337 2.985 6.66c-.608 6.151-6.888 13.156-6.386 12.699c1.398-1.205 6.103-6.88 6.987-12.2c.888-5.316-3.586-7.159-3.586-7.159m-6.815 20.78L10.647 24h2.599l.488-2.154z" />
+                </svg>
+                <span class="ml-2 mr-2">CorelDRAW</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
+                    <path fill="#fff"
+                        d="M 27.5 1 C 26.122 1 25 2.122 25 3.5 L 25 10 L 31.5 10 C 33.981 10 36 12.019 36 14.5 L 36 49 L 40.5 49 C 41.878 49 43 47.879 43 46.5 L 43 3.5 C 43 2.122 41.878 1 40.5 1 L 27.5 1 z M 18.5 12 C 17.122 12 16 13.122 16 14.5 L 16 20 L 22.5 20 C 24.981 20 27 22.019 27 24.5 L 27 49 L 31.5 49 C 32.878 49 34 47.879 34 46.5 L 34 14.5 C 34 13.122 32.878 12 31.5 12 L 18.5 12 z M 9.5 22 C 8.122 22 7 23.122 7 24.5 L 7 46.5 C 7 47.879 8.122 49 9.5 49 L 22.5 49 C 23.878 49 25 47.879 25 46.5 L 25 24.5 C 25 23.122 23.878 22 22.5 22 L 9.5 22 z">
+                    </path>
+                </svg>
+                <span class="ml-2 mr-2">Power BI</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
+                    <path fill="currentColor"
+                        d="M222 114.56a54 54 0 0 0-58.67-74.73a54 54 0 0 0-94 13.46A54 54 0 0 0 34 141.44a54 54 0 0 0 35.56 73.65A54.5 54.5 0 0 0 83.59 217a53 53 0 0 0 9.06-.78a54 54 0 0 0 94-13.46a54 54 0 0 0 35.35-88.2M183.37 52.5a42 42 0 0 1 29.21 53.14a55 55 0 0 0-5.08-3.33L163 76.62a6 6 0 0 0-6 0l-47 27.13V80.66l41.5-24a41.73 41.73 0 0 1 31.87-4.16M146 138.39l-18 10.39l-18-10.39v-20.78l18-10.39l18 10.39ZM78 72a42 42 0 0 1 72.92-28.43a56 56 0 0 0-5.42 2.74L101 72a6 6 0 0 0-3 5.19v54.27l-20-11.54ZM39.13 85.93a41.75 41.75 0 0 1 27.22-20A55 55 0 0 0 66 72v51.38a6 6 0 0 0 3 5.2l47 27.13l-20 11.55l-41.5-24a42 42 0 0 1-15.37-57.33m33.5 117.57a42 42 0 0 1-29.21-53.14a55 55 0 0 0 5.08 3.33L93 179.38a6 6 0 0 0 6 0l47-27.13v23.09l-41.5 24a41.73 41.73 0 0 1-31.87 4.16M178 184a42 42 0 0 1-72.92 28.43a56 56 0 0 0 5.42-2.74L155 184a6 6 0 0 0 3-5.19v-54.27l20 11.54Zm38.87-13.93a41.75 41.75 0 0 1-27.22 20A55 55 0 0 0 190 184v-51.38a6 6 0 0 0-3-5.2l-47-27.13l20-11.55l41.5 24a42 42 0 0 1 15.37 57.33" />
+                </svg>
+                <span class="ml-2 mr-2">Open AI</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M6.099 5.918C2.736 5.918 0 8.646 0 12s2.736 6.083 6.099 6.083H17.9c3.364 0 6.1-2.73 6.1-6.083s-2.736-6.082-6.099-6.082ZM5.977 7.85c.493.012 1.02.25 1.273.623c.368.459.478 1.067.895 1.493c.56.612 1.199 1.15 1.716 1.802c.49.595.839 1.294 1.144 1.998c.124.233.125.52.31.72c.09.12.534.448.438.564c.055.12.47.286.326.402c-.194.04-.413.048-.562-.107c-.054.126-.182.06-.281.043l-.025.074c-.33.022-.576-.313-.732-.565c-.311-.168-.665-.27-.982-.446c-.019.29.045.648-.231.835c-.014.557.843.066.922.48c-.061.007-.129-.009-.178.038c-.223.217-.48-.165-.738-.007c-.346.174-.38.316-.81.352c-.023-.036-.014-.06.006-.081c.12-.14.13-.305.336-.365c-.212-.033-.39.084-.569.176c-.232.095-.23-.214-.588.017c-.04-.033-.02-.062.002-.087c.091-.11.21-.127.345-.12c-.663-.37-.975.45-1.281.043c-.092.024-.127.106-.185.165c-.05-.055-.012-.121-.01-.186c-.06-.028-.135-.041-.117-.137c-.117-.04-.2.03-.286.096c-.08-.061.053-.15.077-.213c.07-.121.23-.025.311-.112c.23-.131.552.08.816.045c.203.026.454-.182.352-.39c-.217-.277-.179-.639-.183-.97c-.027-.192-.491-.438-.626-.646c-.166-.187-.295-.404-.424-.618c-.467-.9-.32-2.058-.908-2.895c-.266.147-.612.078-.841-.119c-.124.113-.13.26-.14.417c-.296-.297-.259-.856-.021-1.186c.096-.13.212-.237.342-.332c.029-.02.039-.041.038-.074c.117-.527.576-.74 1.07-.727m12.407.46c.557 0 1.08.216 1.473.608s.61.915.61 1.47a2.06 2.06 0 0 1-.61 1.47v.001l-.902.9a2.1 2.1 0 0 1-.86.516l-.016.005l-.005.016a2.05 2.05 0 0 1-.474.731l-.902.9c-.394.392-.917.608-1.475.608s-1.08-.216-1.474-.608a2.077 2.077 0 0 1 0-2.94l.902-.9a2.06 2.06 0 0 1 .858-.514l.017-.006l.006-.016a2.1 2.1 0 0 1 .475-.733l.902-.9a2.07 2.07 0 0 1 1.474-.608m0 .897a1.18 1.18 0 0 0-.84.346l-.901.9a1.18 1.18 0 0 0-.343.924l.005.058c.033.265.15.504.338.691c.13.13.273.212.447.269a1 1 0 0 1 .014.158a.88.88 0 0 1-.26.63l-.056.056a1.96 1.96 0 0 1-.78-.48a2.06 2.06 0 0 1-.576-1.096l-.01-.058l-.046.037a1 1 0 0 0-.087.08l-.903.899a1.182 1.182 0 0 0 .84 2.019c.304 0 .607-.116.838-.346l.902-.9a1.18 1.18 0 0 0 0-1.673a1.2 1.2 0 0 0-.436-.275a1 1 0 0 1-.014-.16a.97.97 0 0 1 .29-.693a2.06 2.06 0 0 1 1.372 1.592l.01.058l.046-.038a1 1 0 0 0 .088-.08l.902-.899a1.183 1.183 0 0 0 0-1.673a1.18 1.18 0 0 0-.84-.346M8.41 14.364c-.08.309-.105.833-.506.848c-.033.177.123.244.265.187c.141-.064.208.051.256.166c.218.032.54-.073.552-.33c-.325-.187-.426-.542-.567-.87" />
+                </svg>
+                <span class="ml-2 mr-2">Langchain</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 224">
+                    <defs>
+                        <linearGradient id="logosGradioIcon0" x1="-6.452%" x2="85.236%" y1="49.784%" y2="49.784%">
+                            <stop offset="0%" stop-color="white" />
+                            <stop offset="100%" stop-color="white" />
+                        </linearGradient>
+                        <linearGradient id="logosGradioIcon1" x1="106.079%" x2="14.268%" y1="49.784%" y2="49.784%">
+                            <stop offset="0%" stop-color="white" />
+                            <stop offset="100%" stop-color="white" />
+                        </linearGradient>
+                        <linearGradient id="logosGradioIcon2" x1="-12.871%" x2="169.796%" y1="75.863%" y2="74.878%">
+                            <stop offset="0%" stop-color="white" />
+                            <stop offset="100%" stop-color="white" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#logosGradioIcon0)"
+                        d="M119.871 64.78a16.35 16.35 0 0 1 16.258 0l111.654 64c10.956 6.28 10.956 22.083 0 28.363l-111.654 64a16.35 16.35 0 0 1-16.258 0l-111.654-64c-10.956-6.28-10.956-22.083 0-28.364zm8.126 33.014l-78.783 45.164l78.783 45.155l78.784-45.155z" />
+                    <path fill="url(#logosGradioIcon1)"
+                        d="M119.871 2.165a16.35 16.35 0 0 1 16.258 0l111.654 64c10.956 6.28 10.956 22.083 0 28.363l-111.654 64a16.35 16.35 0 0 1-16.258 0l-111.654-64c-10.956-6.28-10.956-22.083 0-28.363zm8.126 33.015L49.214 80.343l78.783 45.156l78.784-45.156z" />
+                    <path fill="url(#logosGradioIcon2)"
+                        d="m120.19 64.755l16.174 28.412l-111.93 63.723l-16.175-28.412z" />
+                </svg>
+                <span class="ml-2 mr-2">Gradio</span>
+            </div>
+            <div
+                class="bg-neutral-700 bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300 text-white rounded px-4 py-2 flex items-center mt-5">
+                <svg width="25" height="25" viewBox="0 0 1207 1456" fill="none" version="1.1" id="svg1"
+                    sodipodi:docname="Maltego-Logo-Compact-White.svg"
+                    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                    <defs id="defs1" />
+                    <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
+                        inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0"
+                        inkscape:deskcolor="#d1d1d1" inkscape:zoom="0.39677626" inkscape:cx="442.31477"
+                        inkscape:cy="570.85068" inkscape:window-width="1920" inkscape:window-height="1094"
+                        inkscape:window-x="-11" inkscape:window-y="-11" inkscape:window-maximized="1"
+                        inkscape:current-layer="svg1" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="m 592.97599,252.15789 c -5.83578,-0.75813 -11.71871,-1.10497 -17.60302,-1.0378 -51.88312,0.004 -136.54925,20.47204 -192.92357,46.86234 C 283.45854,343.1325 201.70337,418.4676 149.17568,512.93671 96.026994,607.24954 75.227444,716.06265 89.897324,823.05653 c 10.500266,79.8523 40.079836,156.08402 86.289346,222.38327 46.2095,66.3021 107.72238,120.7648 179.4458,158.8821 71.72342,38.1171 151.59479,58.792 233.00341,60.3125 81.40862,1.5202 162.01743,-16.1591 235.14505,-51.5702 202.63917,-98.7217 289.66197,-295.76339 286.45287,-449.32351 l -0.045,-2.13452 -81.4101,0.43047 -0.08,2.07146 c -4.7171,120.18904 -49.71648,221.21935 -133.23764,300.3765 l -0.0166,0.016 c -39.26754,38.0158 -85.721,68.0089 -136.71004,88.2658 -50.98765,20.258 -105.51143,30.3851 -160.45799,29.8011 h -0.0236 -18.39868 c -208.07846,-7.6201 -379.13376,-165.293 -407.2218,-375.05687 l -0.003,-0.0151 c -13.48886,-95.60559 8.53469,-192.80422 61.98418,-273.5764 l 0.01,-0.0151 c 82.01309,-126.3298 202.1833,-194.13167 358.17365,-201.63749 l 2.0848,-0.10012 v -79.76177 z m 280.06125,235.3317 C 800.47796,415.49681 701.97365,374.95992 599.19299,374.79403 499.74191,373.70552 403.91154,411.66096 332.71208,480.34158 l -1.67034,1.61085 31.91112,28.54541 28.66053,25.87622 1.47766,-1.32705 c 43.9847,-39.5142 98.71086,-65.41647 157.41811,-74.50433 58.70586,-9.08786 118.8187,-0.96513 172.90722,23.36742 54.0899,24.33119 99.78374,63.80426 131.43704,113.54006 31.65329,49.73581 47.87568,107.5546 46.66555,166.30973 -1.21013,58.75512 -19.80288,115.87199 -53.4786,164.29172 -33.67572,48.41834 -80.95812,86.01729 -136.00448,108.14959 -55.04637,22.1322 -115.44337,27.827 -173.72645,16.3797 -58.28309,-11.4458 -111.89891,-39.5319 -154.21743,-80.78445 l -1.62044,-1.5793 -42.74407,46.18505 -12.59477,13.712 1.39726,1.46 c 65.85575,68.8247 165.8502,109.7852 269.4099,109.7865 102.78343,0.1631 201.42359,-40.0625 274.21853,-111.8264 C 944.95475,957.77055 985.9425,860.34433 986.1075,758.69158 986.2724,657.03882 945.6007,559.48513 873.03724,487.48959 Z M 466.18819,528.3418 c 40.53727,-22.878 86.42518,-34.86125 133.09767,-34.75844 38.9515,-0.07 77.43585,8.38458 112.69458,24.75754 108.2006,49.91266 154.86338,154.36211 153.09463,232.75849 l -0.0471,2.11807 h -82.01439 l -0.0901,-2.07283 c -1.27667,-29.00193 -9.50223,-57.28823 -23.99746,-82.5311 -14.49661,-25.24147 -34.84842,-46.71702 -59.38092,-62.6554 l -0.0319,-0.0206 c -29.45765,-19.88387 -64.3435,-30.41395 -100.007,-30.18638 h -0.0125 c -8.10635,0.008 -16.20299,0.51272 -24.24556,1.51076 -44.16075,5.42749 -84.81863,26.5658 -114.37603,59.46664 -29.55877,32.90084 -45.9988,75.31591 -46.25246,119.32673 v 0.0111 c -0.91626,82.92592 61.26058,175.28244 178.45745,184.7569 l 2.01412,0.16314 v 79.65478 H 584.2458 c -69.12296,0 -166.92448,-41.83095 -218.8478,-133.54724 -22.79286,-40.28189 -34.52681,-85.7651 -34.03057,-131.92279 0.49486,-46.15907 13.20191,-91.38452 36.85422,-131.17975 23.65366,-39.79386 57.42919,-72.77147 97.96647,-95.64948 z m 211.8282,226.52214 c 0,45.80812 -37.5473,82.94101 -83.86353,82.94101 -46.31624,0 -83.86354,-37.13289 -83.86354,-82.94101 0,-45.80672 37.5473,-82.94098 83.86354,-82.94098 46.31623,0 83.86353,37.13426 83.86353,82.94098 z M 432.92278,1473.6621 h 30.12988 v 111.1958 h 69.48336 v 23.8951 h -99.61324 z m -114.55344,0.2331 -60.91128,135.1046 h 30.70099 l 12.24685,-29.3927 h 65.72962 l 12.24685,29.3927 h 31.43564 l -61.07483,-135.1046 z m -8.40993,83.6675 23.43329,-56.1256 23.51506,56.1256 z m -152.27816,2.4129 51.68489,-86.149 h 24.82221 l 0.40754,135.091 h -28.08804 l -0.24397,-84.8739 -36.57976,60.8142 -12.4922,20.4267 -5.96055,-9.6924 -0.65288,-1.1241 -42.21316,-68.5601 v 83.0918 H 80.277284 v -135.1046 -0.069 h 24.903996 z m 376.24372,-86.3135 v 23.8129 h 44.3354 v 111.278 h 30.04671 v -111.278 h 44.33679 v -23.8952 h -118.7189 z m 541.17483,6.7038 c 11.3501,6.0457 20.2493,14.4496 26.7823,25.1154 6.4499,10.4875 9.7159,22.3598 9.7159,35.6852 0,13.3253 -3.1842,25.2798 -9.7159,35.9319 -6.533,10.5014 -15.4322,18.8228 -26.7823,24.8686 -11.3484,6.0595 -24.086,9.1303 -38.3748,9.1303 -14.2069,0 -27.108,-3.0708 -38.5384,-9.1303 -11.35,-6.0458 -20.24923,-14.285 -26.78227,-24.8686 -6.36809,-10.6521 -9.55213,-22.6888 -9.55213,-35.9319 0,-13.2432 3.18404,-25.1155 9.55213,-35.6852 6.53304,-10.6658 15.43227,-19.0697 26.78227,-25.1154 11.5122,-6.0594 24.3315,-9.1304 38.5384,-9.1304 14.2888,0 27.0264,3.071 38.3748,9.1304 z m -15.6761,100.0502 c 6.7769,-3.8798 12.0846,-9.2949 15.8397,-16.0673 3.9201,-6.7861 5.8788,-14.5455 5.8788,-23.1823 0,-8.6369 -1.9587,-16.3141 -5.8788,-23.1687 -3.7551,-6.7861 -9.0628,-12.1189 -15.8397,-15.8341 -6.7771,-3.8798 -14.3705,-5.8128 -22.6987,-5.8128 -8.3282,0 -15.9216,1.933 -22.6986,5.8128 -6.6952,3.7152 -12.0846,8.9658 -16.0034,15.8341 -3.8383,6.7724 -5.7152,14.5318 -5.7152,23.1687 0,8.6368 1.9587,16.314 5.7152,23.1823 3.9188,6.8547 9.2264,12.1875 16.0034,16.0673 6.777,3.7152 14.3704,5.5659 22.6986,5.5659 8.41,0 15.9216,-1.8507 22.6987,-5.5659 z m -348.9736,-28.8306 h 59.6055 v -22.6888 h -59.6055 v -31.737 h 72.91415 v -23.4976 H 680.56695 V 1608.753 H 785.8954 v -23.4975 h -75.4453 z m 175.46748,-55.3168 c -8.98103,0 -16.98202,1.933 -24.00437,5.8126 -7.02236,3.7976 -12.49221,9.1304 -16.41231,16.0673 -3.91871,6.9506 -5.87877,14.9431 -5.87877,23.9912 0,9.4457 1.79649,16.3689 5.63481,23.0727 3.91871,6.7038 9.14458,11.79 15.67624,15.2584 5.79698,2.9887 12.08466,4.6063 18.77989,4.9217 h 29.39381 v -36.7408 h 27.2716 v 61.294 h -59.53341 c -0.5919,0 -2.03074,-0.082 -2.03074,-0.082 l -1.06181,-0.082 c -10.85929,-0.562 -20.90212,-3.2217 -30.1285,-7.9925 -10.53354,-5.4151 -18.86168,-13.2431 -25.14936,-23.4977 -6.2863,-10.3367 -9.38856,-21.5371 -9.38856,-35.9182 0,-13.8052 3.18405,-26.0751 9.55212,-36.7408 6.53305,-10.8166 15.51406,-19.2205 26.94447,-25.2662 11.51357,-6.0594 24.41329,-9.1304 38.78375,-9.1304 12.0029,0 22.86219,2.0153 32.74282,5.9774 9.47036,3.8797 17.39095,9.3633 23.92261,16.6292 l -19.18742,17.5342 c -9.96105,-10.1037 -21.96394,-15.1076 -35.92687,-15.1076 z"
+                        fill="white" id="path1" style="fill:#fff;stroke-width:1.37853" />
+                </svg>
+                <span class="ml-2 mr-2">Maltego</span>
+            </div>
+        </div>
+    </section>
+ <section id="resume" class="section py-12">
+    <div class="ml-12">
+        <div class="flex items-center space-x-2">
+            <h2 class="text-neutral-400 text-xs font-bold">RESUME</h2>
+            <div class="underline underline-section"></div>
+        </div>
+        <h2 class="text-3xl font-semibold text-white">Check my Resume</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
+            <!-- Left Side (Summary + Education) -->
+            <div class="space-y-8">
+                <!-- Summary Section -->
+                <div class="mr-12 md:mr-auto">
+                    <h2 class="text-xl font-bold mb-1">Summary</h2>
+                    <div class="flex items-start space-x-3 relative vertical-line">
+                        <div class="relative">
+                            <span class="w-3 h-3 bg-yellow-400 rounded-full inline-block mt-1"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-yellow-400">KHOUSHICK S</h3>
+                            <p class="mt-2 text-sm italic">
+                                Driven engineer with an aim of delivering exceptional results through innovative solutions, collaboration, and commitment. Adaptable and forward-thinking, continuously seeking opportunities to drive advancements in the field.
+                            </p>
+                            <ul class="mt-4 text-sm space-y-2">
+                                <li><i class="fa-solid fa-location-dot"></i> Namakkal, Tamil Nadu</li>
+                                <li><i class="fa-solid fa-phone"></i> +91 86680 38130</li>
+                                <li><i class="fa-solid fa-envelope"></i> <a href="mailto:khoushick@gmail.com">khoushick@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Education Section -->
+                <div class="mr-12 md:mr-auto">
+                    <h2 class="text-xl font-bold mb-1">Education</h2>
+                    <div class="flex items-start space-x-3 relative vertical-line">
+                        <div class="z-10">
+                            <span class="w-3 h-3 bg-yellow-400 rounded-full inline-block mt-1"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-yellow-400">GRADE X</h3>
+                            <div class="absolute bg-zinc-800 text-sm text-white rounded px-1 py-1 flex items-center mt-2">
+                                <span class=" ml-2 mr-2">2018</span>
+                            </div>
+                            <h2 class="mt-11 text-sm text-yellow-400">KSR Akshara Academy Sr. Sec. School (CBSE), Tiruchengode, Tamil Nadu</h2>
+                            <p class="mt-1 mb-8 text-sm italic">
+                                <strong>Grade: </strong> 91.6%
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3 relative vertical-line">
+                        <div class="z-10">
+                            <span class="w-3 h-3 bg-yellow-400 rounded-full inline-block mt-1"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-yellow-400">GRADE XII - PCMC</h3>
+                            <div class="absolute bg-zinc-800 text-sm text-white rounded px-1 py-1 flex items-center mt-2">
+                                <span class=" ml-2 mr-2">2020</span>
+                            </div>
+                            <h2 class="mt-11 text-sm text-yellow-400">KSR Akshara Academy Sr. Sec. School (CBSE), Tiruchengode, Tamil Nadu</h2>
+                            <p class="mt-1 mb-8 text-sm italic">
+                                <strong>Grade: </strong> 92.2%
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3 relative vertical-line">
+                        <div class="z-10">
+                            <span class="w-3 h-3 bg-yellow-400 rounded-full inline-block mt-1"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-yellow-400">BACHELOR OF ENGINEERING, ELECTRICAL AND ELECTRONICS ENGINEERING</h3>
+                            <div class="absolute bg-zinc-800 text-sm text-white rounded px-1 py-1 flex items-center mt-2">
+                                <span class=" ml-2 mr-2">2020 - 2024</span>
+                            </div>
+                            <h2 class="mt-11 text-sm text-yellow-400">Coimbatore Institute of Technology, Coimbatore, Tamil Nadu</h2>
+                            <p class="mt-1 mb-8 text-sm italic">
+                                <strong>Class: </strong> First class with Distinction
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3 relative vertical-line">
+                        <div class="z-10">
+                            <span class="w-3 h-3 bg-yellow-400 rounded-full inline-block"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-yellow-400">NXTWAVE DISRUPTIVE TECHNOLOGIES</h3>
+                            <div class="absolute bg-zinc-800 text-sm text-white rounded px-1 py-1 flex items-center mt-2">
+                                <span class=" ml-2 mr-2">2020 - 2026</span>
+                            </div>
+                            <h2 class="mt-11 text-sm text-yellow-400">NxtWave CCBP 4.0 Academy, Online</h2>
+                            <p class="mt-1 text-sm italic">
+                                The Industry Ready Certification in Full-stack Development provides a concise and practical program covering essential front-end and back-end technologies. Through hands-on projects and expert guidance, participants gain proficiency in HTML, CSS, JavaScript, React.js, Node.js, and deployment strategies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side (Experience) -->
+            <div class="space-y-8 mr-12">
+                <div>
+                    <h2 class="text-xl font-bold mb-1">Experience</h2>
+                    <div class="flex items-start space-x-3 relative vertical-line">
+                        <div class="z-10">
+                            <span class="w-3 h-3 bg-yellow-400 rounded-full inline-block mt-1"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-yellow-400">INTERNSHIP TRAINEE</h3>
+                            <div class="absolute bg-zinc-800 text-sm text-white rounded px-1 py-1 flex items-center mt-2">
+                                <span class=" ml-2 mr-2">July 2022</span>
+                            </div>
+                            <h2 class="mt-11 text-sm text-yellow-400">Neyveli Lignite Corporation India Limited, Neyveli, Tamil Nadu</h2>
+                            <p class="mt-1 mb-8 text-sm italic">
+                                I gained extensive hands-on experience with power systems, working closely with generators and transformers. This provided practical insights into the operation of transmission lines, circuit breakers, and capacitor banks. Additionally, I further developed my technical knowledge and problem-solving abilities in electrical engineering.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-3 relative vertical-line">
+                        <div class="z-10">
+                            <span class="w-3 h-3 bg-yellow-400 rounded-full inline-block mt-1"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-yellow-400">IN PLANT TRAINEE</h3>
+                            <div class="absolute bg-zinc-800 text-sm text-white rounded px-1 py-1 flex items-center mt-2">
+                                <span class=" ml-2 mr-2">December 2022 - January 2023</span>
+                            </div>
+                            <h2 class="mt-11 text-sm text-yellow-400">Tekion India Private Limited, Chennai, Tamil Nadu</h2>
+                            <p class="mt-1 mb-8 text-sm italic">
+                                I gained experience in UI/UX design by working on a custom task management application, drawing inspiration from Asana's interface. This involved creating intuitive designs and enhancing the user experience to streamline task management workflows.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3 relative vertical-line">
+                        <div class="z-10">
+                            <span class="w-3 h-3 bg-yellow-400 rounded-full inline-block"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-yellow-400">PROJECT INTERN</h3>
+                            <div class="absolute bg-zinc-800 text-sm text-white rounded px-1 py-1 flex items-center mt-2">
+                                <span class=" ml-2 mr-2">January 2024 - July 2024</span>
+                            </div>
+                            <h2 class="mt-11 text-sm text-yellow-400">Oracle Energy and Water Global Business Unit, Hyderabad, Telangana</h2>
+                            <p class="mt-1 mb-8 text-sm italic">
+                                I have supported diverse projects, gaining experience in proficiently configuring Network Management Systems (NMS), along with expertise in configuring OMA and Flex applications. Additionally, I have engaged in modelling tasks.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3 relative vertical-line">
+                        <div class="z-10">
+                            <span class="w-3 h-3 bg-yellow-400 rounded-full inline-block"></span>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-yellow-400">CONSULTANT DEVELOPER</h3>
+                            <div class="absolute bg-zinc-800 text-sm text-white rounded px-1 py-1 flex items-center mt-2">
+                                <span class=" ml-2 mr-2">August 2024 - Present</span>
+                            </div>
+                            <h2 class="mt-11 text-sm text-yellow-400">Oracle Energy and Water Global Business Unit, Hyderabad, Telangana</h2>
+                            <p class="mt-1 mb-8 text-sm italic">
+                                I am supporting in diverse projects, gaining experience in proficiently configuring Network Management Systems (NMS), along with expertise in configuring OMA and Flex applications. Additionally, I am engaged in modelling tasks. This highlights my versatile technical skills in application configuration and modelling, essential for contributing effectively in technology roles.                         </p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="bg-yellow-400 hover:bg-yellow-600 text-neutral-900 font-semibold py-2 px-4 rounded shadow-lg transition duration-300 ease-in-out mt-8 text-md">
+            <i class="fa fa-download"></i>
+            <a href="Khoushick Resume.docx" download>Download my Resume</a>
+        </button>
+    </div>
+</section>
+
+<section id="projects" class="section py-12 bg-black">
+    <div class=" ml-12 flex items-center space-x-2">
+        <h2 class="text-neutral-400 text-xs font-bold">PROJECTS</h2>
+        <div class="underline underline-section"></div>
+    </div>
+    <h2 class=" ml-12 mb-8 text-3xl font-semibold text-white">My Works</h2>
+    <div class="flex flex-wrap justify-around ml-12 mr-12">
+        <div class="max-w-xs mx-auto mb-8 rounded-lg shadow-lg overflow-hidden bg-neutral-500 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+            <div class="p-2">
+              <img src="1721400049860.jpeg" alt="Real Mart Analysis" class="w-full border border-yellow-500 rounded-md h-40 object-cover">
+            </div>
+            <div class="p-2 text-white">
+              <h3 class="text-md font-semibold">Data &lt-&gt Insights: Real Mart Analysis</h3>
+              <p class="text-sm line-clamp-3 overflow-scroll">Transformed raw data into insightful visualizations and drive informed decision-making using Real mart's dataset.</p>
+            </div>
+            <div class="flex flex-wrap justify-center pl-2 pr-2 pb-4">
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">MS Power BI</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Kaggle</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">MS Excel</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">MS Copilot</span>
+                </div>
+            </div>
+          </div>
+          <div class="max-w-xs mx-auto mb-8 rounded-lg shadow-lg overflow-hidden bg-neutral-500 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+            <div class="p-2">
+              <img src="1690728385877.jpeg" alt="Generative AI: ChatBot" class="w-full border border-yellow-500 rounded-md h-40 object-cover">
+            </div>
+            <div class="p-2 text-white">
+              <h3 class="text-md font-semibold">Generative AI: ChatBot</h3>
+              <p class="text-sm line-clamp-3 overflow-scroll">AI ChatBot continuously learns and adapts. It can understand context, detect emotions, and respond intelligently, providing authentic and personalized interactions. It's like chatting with a friend, but powered by AI!
+                The potential applications for this cutting-edge chatbot are limitless. From improving customer support to offering interactive educational experiences and simplifying everyday tasks, AI ChatBot is poised to transform our engagement with AI technology!</p>
+            </div>
+            <div class="flex flex-wrap justify-center pl-2pr-2 pb-4">
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Open AI</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">LangChain</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Gradio</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Google Colab</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Hugging Face</span>
+                </div>
+            </div>
+          </div>
+          <div class="max-w-xs mx-auto mb-8 rounded-lg shadow-lg overflow-hidden bg-neutral-500 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+            <div class="p-2">
+              <img src="1690738275463.jpeg" alt="Generative AI: VoiceBot" class="w-full border border-yellow-500 rounded-md h-40 object-cover">
+            </div>
+            <div class="p-2 text-white">
+              <h3 class="text-md font-semibold">Generative AI: VoiceBot</h3>
+              <p class="text-sm line-clamp-3 overflow-scroll">AI VoiceBot continuously learns and adapts. It can understand context, detect emotions, and respond intelligently, providing authentic and personalized interactions. It's like chatting with a friend, but powered by AI!
+                The potential applications for this cutting-edge voicebot are limitless. From improving customer support to offering interactive educational experiences and simplifying everyday tasks, AI VoiceBot is poised to transform our engagement with AI technology!</p>
+            </div>
+            <div class="flex flex-wrap justify-center pl-2 pr-2 pb-4">
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Open AI</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">LangChain</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">PlayHT</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Gradio</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Google Colab</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Hugging Face</span>
+                </div>
+            </div>
+          </div>
+          <div class="max-w-xs mx-auto mb-8 rounded-lg shadow-lg overflow-hidden bg-neutral-500 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+            <div class="p-2">
+              <img src="ml model.png" alt="Teachable Machine Image Model" class="w-full border border-yellow-500 rounded-md h-40 object-cover">
+            </div>
+            <div class="p-2 text-white">
+              <h3 class="text-md font-semibold">Teachable Machine Image Model</h3>
+              <p class="text-sm line-clamp-3 overflow-scroll">Built a machine learning model using Teachable machine.</p>
+            </div>
+            <div class="flex flex-wrap justify-center pr-4 pb-4">
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Teachable Machine</span>
+                </div>
+            </div>
+          </div>
+          <div class="max-w-xs mx-auto mb-8 rounded-lg shadow-lg overflow-hidden bg-neutral-500 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+            <div class="p-2">
+              <img src="netflix.png" alt="Netflix clone" class="w-full border border-yellow-500 rounded-md h-40 object-cover">
+            </div>
+            <div class="p-2 text-white">
+              <h3 class="text-md font-semibold">Netflix clone</h3>
+              <p class="text-sm line-clamp-3 overflow-scroll">Cloned netflix homepage using basics.</p>
+            </div>
+            <div class="flex flex-wrap justify-center pr-4 pb-4">
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">HTML</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">CSS</span>
+                </div>
+            </div>
+          </div>
+          <div class="max-w-xs mx-auto mb-8 rounded-lg shadow-lg overflow-hidden bg-neutral-500 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+            <div class="p-2">
+              <img src="maltego.jpeg" alt="Phishing Email Investigation" class="w-full border border-yellow-500 rounded-md h-40 object-cover">
+            </div>
+            <div class="p-2 text-white">
+              <h3 class="text-md font-semibold">Phishing Email Investigation</h3>
+              <p class="text-sm line-clamp-3 overflow-scroll">Mastered the art of investigating malicious emails using the Maltego platform. This tool has proven to be an invaluable asset in uncovering the intricate web of digital threats.</p>
+            </div>
+            <div class="flex flex-wrap justify-center pr-4 pb-4">
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Maltego</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Kali Linux</span>
+                </div>
+            </div>
+          </div>
+          <div class="max-w-xs mx-auto mb-8 rounded-lg shadow-lg overflow-hidden bg-neutral-500 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+            <div class="p-2">
+              <img src="osint.jpeg" alt="Harvester Attack & Fetching raw data" class="w-full border border-yellow-500 rounded-md h-40 object-cover">
+            </div>
+            <div class="p-2 text-white">
+              <h3 class="text-md font-semibold">Harvester Attack & Fetching raw data</h3>
+              <p class="text-sm line-clamp-3 overflow-scroll">Built an OSINT environment from scratch. Mastered the art of crafting a site cloner credential harvester attack using the Social Engineering Toolkit. Also learnt to scan any type of Target to get it's raw data using Spiderfoot.</p>
+            </div>
+            <div class="flex flex-wrap justify-center pr-4 pb-4">
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Spiderfoot</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Open Source Intelligence</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Social Engineering Toolkit</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Kali Linux</span>
+                </div>
+            </div>
+          </div> 
+          <div class="max-w-xs mx-auto mb-8 rounded-lg shadow-lg overflow-hidden bg-neutral-500 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+            <div class="p-2">
+              <img src="aws.png" alt="Harvester Attack & Fetching raw data" class="w-full border border-yellow-500 rounded-md h-40 object-cover">
+            </div>
+            <div class="p-2 text-white">
+              <h3 class="text-md font-semibold">Building & Deploying an Application on AWS</h3>
+              <p class="text-sm line-clamp-3 overflow-scroll">Project was completed with assistance from an extensive AWS Mega workshop. CloudFront was chosen over Route 53 to enhance page loading speed due to previous delays.</p>
+            </div>
+            <div class="flex flex-wrap justify-center pr-4 pb-4">
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Amazon EC2</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Amazon Relational Database Service</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Amazon Route S3</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Amazon CloudFront</span>
+                </div>
+            </div>
+          </div> 
+          <div class="max-w-xs mx-auto mb-8 rounded-lg shadow-lg overflow-hidden bg-neutral-500 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+            <div class="p-2">
+              <img src="todo.png" alt="TodoList" class="w-full border border-yellow-500 rounded-md h-40 object-cover">
+            </div>
+            <div class="p-2 text-white">
+              <h3 class="text-md font-semibold">TodoList</h3>
+              <p class="text-sm line-clamp-3 overflow-scroll">I created todo list where we can create todo, save and delete the list.</p>
+            </div>
+            <div class="flex flex-wrap justify-center pr-4 pb-4">
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">HTML</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">CSS</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Javascript</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Bootstap</span>
+                </div>
+            </div>
+          </div>
+          <div class="max-w-xs mx-auto mb-8 rounded-lg shadow-lg overflow-hidden bg-neutral-500 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+            <div class="p-2">
+              <img src="wiki.png" alt="wiki" class="w-full border border-yellow-500 rounded-md h-40 object-cover">
+            </div>
+            <div class="p-2 text-white">
+              <h3 class="text-md font-semibold">Wikipedia Search Application</h3>
+              <p class="text-sm line-clamp-3 overflow-scroll">I  created a Wikipedia search application where we can search for any topic and get the result.</p>
+            </div>
+            <div class="flex flex-wrap justify-center pr-4 pb-4">
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">HTML</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">CSS</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Rest API</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Javascript</span>
+                </div>
+            </div>
+          </div> 
+          <div class="max-w-xs mx-auto mb-8 rounded-lg shadow-lg overflow-hidden bg-neutral-500 bg-opacity-50 rounded-full hover:bg-yellow-500 hover:bg-opacity-70 transition duration-300">
+            <div class="p-2">
+              <img src="country filter.png" alt="country" class="w-full border border-yellow-500 rounded-md h-40 object-cover">
+            </div>
+            <div class="p-2 text-white">
+              <h3 class="text-md font-semibold">Country Population Filter</h3>
+              <p class="text-sm line-clamp-3 overflow-scroll">I  created a country population filter where we can filter the country based on population.</p>
+            </div>
+            <div class="flex flex-wrap justify-center pr-4 pb-4">
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">HTML</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">CSS</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Rest API</span>
+                </div>
+                <div class="bg-white bg-opacity-50 text-xs text-black rounded px-1 py-1 flex items-center m-1">
+                    <span class=" ml-2 mr-2">Javascript</span>
+                </div>
+            </div>
+          </div> 
+          
+    </div>
+</section>
+<section id="contact" class="section py-12">
+    <div class="ml-12">
+        <div class="flex items-center space-x-2">
+            <h2 class="text-neutral-400 text-xs font-bold">CONTACT</h2>
+            <div class="underline underline-section"></div>
+        </div>
+        <h2 class="text-3xl font-semibold text-white">Contact Me</h2>
+        <div class="container mx-auto py-12">
+            <div class="max-w-2xl md:mx-auto mr-12 bg-stone-600 bg-opacity-40 p-8 rounded-lg shadow-lg">
+                <!-- Address Section -->
+                <div class="grid grid-cols-2 md:grid-cols-2 gap-6">
+                    <div class="flex items-center">
+                        <div class="text-yellow-400">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-md md:text-lg">My Address</h4>
+                            <p class="text-sm md:text-md">Namakkal, Tamil Nadu</p>
+                        </div>
+                    </div>
+    
+                    <!-- Social Profiles Section -->
+                    <div class="flex items-center">
+                        <div class="text-yellow-400">
+                            <i class="fa-solid fa-hashtag"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-md md:text-lg">Social Profiles</h4>
+                            <p>
+                                <a href="https://www.linkedin.com/in/khoushick" class="inline-block ml-0 mx-2"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/khoushick" class="inline-block mx-2"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/@Khoushick-S" class="inline-block mx-2"><i class="fab fa-youtube"></i></a>
+                                <a href="https://x.com/Khoushick_S" class="inline-block mx-2"><i class="fab fa-twitter"></i></a>
+                            </p>
+                        </div>
+                    </div>
+    
+                    <!-- Email Section -->
+                    <div class="flex items-center">
+                        <div class="text-yellow-400">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-md md:text-lg">Email Me</h4>
+                            <a href="mailto:khoushick@gmail.com" class="text-sm md:text-md">khoushick@gmail.com</a>
+                        </div>
+                    </div>
+    
+                    <!-- Call Section -->
+                    <div class="flex items-center">
+                        <div class="text-yellow-400">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-md md:text-lg">Call Me</h4>
+                            <p class="text-sm md:text-md">+91 86680 38130</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Contact Form -->
+                <div class="mt-8">
+                    <form class="flex flex-col justify-center">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" class="w-full p-3 text-white bg-stone-600 bg-opacity-40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <input type="email" placeholder="Your Email" class="w-full p-3 text-white bg-stone-600 bg-opacity-40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                        </div>
+                        <input type="text" placeholder="Subject" class="w-full mt-4 p-3 text-white bg-stone-600 bg-opacity-40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                        <textarea placeholder="Message" class="w-full mt-4 p-3 text-white bg-stone-600 bg-opacity-40 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+                        <button class="w-auto self-center mt-4 p-3 bg-yellow-500 text-gray-900 font-bold rounded-lg hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="w-full p-2 bottom-0 bg-yellow-500 bg-opacity-40 text-gray-100 text-center">
+        <p>&copy; 2024 Khoushick. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script>
+        const toggleButton = document.getElementById('navbar-toggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const navIcon = document.getElementById('nav-icon');
+        toggleButton.onclick = function () {
+            mobileNav.classList.toggle('hidden');
+            navIcon.classList.toggle('fa-x');
+        }
+        const cursor = document.getElementById('cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/91e75dc44e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.10/lib/index.min.js"></script>
+</body>
+
+</html>
